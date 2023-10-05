@@ -64,3 +64,20 @@ button {
     height: 20px;
     max-width: none;
 }
+
+.product-gallery--inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-info {
+    padding-left: 3%;
+    position: relative;
+}
+
+.product-rating {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    gap: 10px;
+}
