@@ -1,0 +1,7 @@
+button.navbar-brand{
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #1c1c1c;
+}
+@media (min-width: 991px) {
+    
+}
