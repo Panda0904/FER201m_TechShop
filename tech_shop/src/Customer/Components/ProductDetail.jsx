@@ -44,7 +44,7 @@ function ProductDetail() {
                                         <ul className="list-variants">
                                             <li className={`item-variant false ${selectedVariantColor === 0 ? 'red-border' : ''}`} onClick={() => handleVariantClick1(0)}>
                                                 <a title="Kem" className="button__change-color d-flex " >
-                                                    <img src="images/galaxy-z-fold-5-kem-1_1.webp" width="50" height="50" alt="Samsung Galaxy Z Fold5 12GB 256GB-Kem" loading="lazy" />
+                                                    <img src="images/Galaxy-Fold-5/galaxy-z-fold-5-kem-1_1.webp" width="50" height="50" alt="Samsung Galaxy Z Fold5 12GB 256GB-Kem" loading="lazy" />
                                                     <div>
                                                         <strong className="item-variant-name">Kem</strong>
                                                     </div>
@@ -53,7 +53,7 @@ function ProductDetail() {
 
                                             <li className={`item-variant false ${selectedVariantColor === 1 ? 'red-border' : ''}`} onClick={() => handleVariantClick1(1)}>
                                                 <a title="Kem" className="button__change-color d-flex " >
-                                                    <img src="images/galaxy-z-fold-5-kem-1_1.webp" width="50" height="50" alt="Samsung Galaxy Z Fold5 12GB 256GB-Kem" loading="lazy" />
+                                                    <img src="images/Galaxy-Fold-5/galaxy-z-fold-5-kem-1_1.webp" width="50" height="50" alt="Samsung Galaxy Z Fold5 12GB 256GB-Kem" loading="lazy" />
                                                     <div>
                                                         <strong className="item-variant-name">Kem</strong>
                                                     </div>
@@ -62,7 +62,7 @@ function ProductDetail() {
 
                                             <li className={`item-variant false ${selectedVariantColor === 2 ? 'red-border' : ''}`} onClick={() => handleVariantClick1(2)}>
                                                 <a title="Kem" className="button__change-color d-flex " >
-                                                    <img src="images/galaxy-z-fold-5-kem-1_1.webp" width="50" height="50" alt="Samsung Galaxy Z Fold5 12GB 256GB-Kem" loading="lazy" />
+                                                    <img src="images/Galaxy-Fold-5/galaxy-z-fold-5-kem-1_1.webp" width="50" height="50" alt="Samsung Galaxy Z Fold5 12GB 256GB-Kem" loading="lazy" />
                                                     <div>
                                                         <strong className="item-variant-name">Kem</strong>
                                                     </div>

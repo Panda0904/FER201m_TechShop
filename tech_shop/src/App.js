@@ -1,3 +1,4 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Cart from "./Customer/Components/Cart";
 import Footer from "./Customer/Components/Footer";
 import Header from "./Customer/Components/Header";
@@ -10,11 +11,14 @@ function App() {
   return (
     <>
       <Header />
-      {/*<main><ProductList /></main> */}
-      {/* <ManagerLayout/> */}
-
-      {/* <ProductDetail /> */}
-      <Cart/>
+      <BrowserRouter>
+          <Routes>
+            <Route path="/prodDetail" element={<ProductDetail/>}/>
+            <Route path="/prodList" element={<ProductList/>}/>
+            <Route path="/cart" element={<Cart/>}/>
+            <Route path="/manager/dashboard" element={<ManagerLayout/>}/>
+          </Routes>
+      </BrowserRouter>
       <footer>
         <Footer />
       </footer>
