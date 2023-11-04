@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const Register = () => {
-    const gia = 1
+    
     const [username, setusername] = useState("");
     const [name, namechange] = useState("");
     const [password, passwordchange] = useState("");
