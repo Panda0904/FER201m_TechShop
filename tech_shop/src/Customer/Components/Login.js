@@ -2,56 +2,35 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
+
 const Login = () => {
     const [username, usernameupdate] = useState('');
     const [password, passwordupdate] = useState('');
-
-    const usenavigate=useNavigate();
+    const [user,setUser]=useState([])
+    const navigate=useNavigate();
 
     useEffect(()=>{
-sessionStorage.clear();
+        fetch("http://localhost:9999/users")
+        .then((res)=>res.json())
+        .then((data)=>setUser(data))
     },[]);
 
     const ProceedLogin = (e) => {
         e.preventDefault();
-        if (validate()) {
-            ///implentation
-            // console.log('proceed');
-            fetch(`http://localhost:9999/users/${username}`).then((res) => {
-                return res.json();
-            }).then((resp) => {
-                //console.log(resp)
-                if (Object.keys(resp).length === 0) {
-                    toast.error('Please Enter valid username');
-                } else {
-                    if (resp.password === password) {
-                        toast.success('Success');
-                        sessionStorage.setItem('username',username);
-                        
-                        usenavigate('/')
-                    }else{
-                        toast.error('Please Enter valid credentials');
-                    }
-                }
-            }).catch((err) => {
-                toast.error('Login Failed due to :' + err.message);
-            });
+        let indexUser=user.findIndex(
+            (user)=>user.userName==username&&user.password==password
+        )
+        if(indexUser===-1){
+            alert("user or password not found")
+        }else{
+            sessionStorage.setItem("user",JSON.stringify(user[indexUser]))
+            navigate("/");
         }
+            
     }
 
     
-    const validate = () => {
-        let result = true;
-        if (username === '' || username === null) {
-            result = false;
-            toast.warning('Please Enter Username');
-        }
-        if (password === '' || password === null) {
-            result = false;
-            toast.warning('Please Enter Password');
-        }
-        return result;
-    }
+    
     return (
         <div className="row">
             <div className="offset-lg-3 col-lg-6" style={{ marginTop: '100px' }}>
