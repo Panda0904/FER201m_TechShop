@@ -7,6 +7,7 @@ import ProductList from "./Customer/Components/ProductList";
 import ManagerLayout from "./Manager/Components/ManagerLayout";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Register from "./Customer/Components/Register";
+import Login from "./Customer/Components/Login";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/cart" element={<Cart/>}/>
             <Route path="/manager/dashboard" element={<ManagerLayout/>}/>
             <Route path="/register" element={<Register/>}/>
+            <Route path="/login" element={<Login/>}/>
           </Routes>
       </BrowserRouter>
       <footer>
