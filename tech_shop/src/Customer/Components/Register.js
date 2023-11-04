@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const Register = () => {
-
+    const gia = 1
     const [username, setusername] = useState("");
     const [name, namechange] = useState("");
     const [password, passwordchange] = useState("");
@@ -54,7 +54,7 @@ const Register = () => {
             let user = { username, name, password, email, phone, country, address, gender };
             if (IsValidate()) {
             //console.log(regobj);
-            fetch("http://localhost:3000/users", {
+            fetch("http://localhost:9999/users", {
                 method: "POST",
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify(user)

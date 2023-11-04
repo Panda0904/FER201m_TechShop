@@ -63,7 +63,7 @@ function Header() {
                                 </ul>
                             </div>
                             <div style={{ marginTop: '7px' }}>
-                                <a href="" className="link-nav">Giỏ hàng</a>
+                                <a href="/register" className="link-nav">Đăng ký</a>
                             </div>
                         </div>
                     </div>

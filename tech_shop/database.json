@@ -35,6 +35,17 @@
       "password": "manager",
       "role": "manager",
       "isActive": true
+    },
+    {
+      "username": "yraigatt3",
+      "name": "user9",
+      "password": "sRQxjPfdS",
+      "email": "user9@gmail.com",
+      "phone": "0321654988",
+      "country": "india",
+      "address": "",
+      "gender": "female",
+      "id": 4
     }
   ],
   "products": [
@@ -47,16 +58,16 @@
           "categoryName": "Điện Thoại"
         }
       ],
-      "infoID" : 1,
-      "image" : [
+      "infoID": 1,
+      "image": [
         "galaxy-z-fold-5-kem-1_1.webp",
         "den-fold-5.webp",
         "xanh-fold-5.webp"
       ],
-      "brand" : [
+      "brand": [
         {
-            "id" : 5,
-            "name" : "Samsung"
+          "id": 5,
+          "name": "Samsung"
         }
       ]
     },
@@ -69,16 +80,16 @@
           "categoryName": "Điện Thoại"
         }
       ],
-      "infoID" : 2,
-      "image" : [
+      "infoID": 2,
+      "image": [
         "iphone-15-pro-max_Titan_Tu_Nhien.webp",
         "vn_iphone_15_pro_blue_titanium.webp",
         "iphone-15-pro-max_Titan_Trang.webp"
       ],
-      "brand" : [
+      "brand": [
         {
-          "id" : 1,
-          "name" : "Apple"
+          "id": 1,
+          "name": "Apple"
         }
       ]
     },
@@ -91,17 +102,17 @@
           "categoryName": "Laptop"
         }
       ],
-      "infoID" : 3,
-      "image" : [
+      "infoID": 3,
+      "image": [
         "Asus-TUF-F15-1.webp",
         "Asus-TUF-F15-2.webp",
         "Asus-TUF-F15-3.webp",
         "Asus-TUF-F15-4.webp"
       ],
-      "brand" : [
+      "brand": [
         {
-          "id" : 2,
-          "name" : "Asus"
+          "id": 2,
+          "name": "Asus"
         }
       ]
     },
@@ -110,33 +121,33 @@
       "productName": "Nồi chiên không dầu Xiaomi Mi Smart Air Fryer dung tích 3.5L",
       "category": [
         {
-          "id" : 3,
-          "name" : "Gia Dụng"
+          "id": 3,
+          "name": "Gia Dụng"
         }
       ],
-      "infoID" : 4,
-      "image" : [
+      "infoID": 4,
+      "image": [
         "Xiaomi-Air-Fryer-1.webp",
         "Xiaomi-Air-Fryer-2.webp",
         "Xiaomi-Air-Fryer-3.webp",
         "Xiaomi-Air-Fryer-4.webp"
       ],
-      "brand" : [
+      "brand": [
         {
-          "id" : 4,
-          "name" : "Xiaomi"
+          "id": 4,
+          "name": "Xiaomi"
         }
       ]
     }
   ],
   "Info": [
     {
-      "id" : 1,
-      "screen" : "6.8 inches 120Hz",
+      "id": 1,
+      "screen": "6.8 inches 120Hz",
       "mainCam": "108 MP, f/1.8 góc rộng 10 MP, f/4.9 10 MP, f/2.4 12 MP, f/2.2 góc siêu rộng",
       "frontCam": "40 MP, f/2.2",
       "chipset": "Snapdragon 8 Gen 1 (4 nm)",
-      "option":[
+      "option": [
         {
           "RAM": "8GB",
           "ROM": "256GB",
@@ -153,21 +164,21 @@
           "price": "51.990.000₫"
         }
       ],
-      "color" : [
+      "color": [
         "Kem",
         "Xanh Dương",
         "Đen"
       ],
-      "pin" : "5000 mAh",
-      "OS" : "Android 12, One UI 4.1"
+      "pin": "5000 mAh",
+      "OS": "Android 12, One UI 4.1"
     },
     {
-      "id" : 2,
-      "screen" : "6.7 inches 120Hz",
+      "id": 2,
+      "screen": "6.7 inches 120Hz",
       "mainCam": "Camera chính: 48MP, 24 mm, ƒ/1.78, Camera góc siêu rộng: 12 MP, 13 mm, ƒ/2.2 Camera Tele 5x: 12 MP, 120 mm, ƒ/2.8 Camera Tele 2x: 12 MP, 48 mm, ƒ/1.78",
       "frontCam": "12MP, ƒ/1.9",
       "chipset": "A17 Pro",
-      "option":[
+      "option": [
         {
           "ROM": "256GB",
           "price": "34.190.000"
@@ -181,42 +192,41 @@
           "price": "45.590.000₫"
         }
       ],
-      "color" : [
+      "color": [
         "Titan Tự Nhiên",
         "Titan Xanh",
         "Titan Trắng"
       ],
-      "pin" : "4422 mAh",
-      "OS" : "iOS 17"
+      "pin": "4422 mAh",
+      "OS": "iOS 17"
     },
     {
-      "id" : 3,
-      "screen" : "IPS FullHD 144Hz",
+      "id": 3,
+      "screen": "IPS FullHD 144Hz",
       "numRAM": "2x SO-DIMM (Nâng cấp tối đa 32GB)",
       "typeRAM": "DDR4-3200 SO-DIMM",
       "cardGraphic": "NVIDIA GeForce RTX 3050 4GB GDDR6, Intel Iris Xe Graphics",
       "CPU": "Intel Core i7-12700H (2.3 GHz, 24M Cache, up to 4.7 GHz, 14 lõi: 6 P, 8 E)",
-      "option":[
+      "option": [
         {
           "RAM": "8GB",
           "ROM": "512GB PCIe 3.0 NVMe M.2 SSD",
           "price": "23.790.000đ"
         }
       ],
-      "color" : [
+      "color": [
         "Xám"
       ],
-      "pin" : "56WHrs, 4S1P, 4-cell Li-ion",
-      "OS" : "Windows 11 Home"
+      "pin": "56WHrs, 4S1P, 4-cell Li-ion",
+      "OS": "Windows 11 Home"
     },
     {
-      "id" : 4,
-      "size" : "335 x 252 x 304 mm",
+      "id": 4,
+      "size": "335 x 252 x 304 mm",
       "materials": "Chất liệu lòng nồi: Kim loại phủ chống dính Chất liệu vỏ: Nhựa chịu nhiệt cao cấp",
-      
       "power": "1500W",
       "temperature": "40 - 200 độ, khí nóng 360 độ, đảm bảo thực phẩm chín đều",
-      "option":[
+      "option": [
         {
           "capacity": "3.5L",
           "price": "1.090.000đ"
@@ -226,61 +236,61 @@
           "price": "1.990.000đ"
         }
       ],
-      "color" : [
+      "color": [
         "Trắng"
       ]
     }
   ],
-  "comments" : [
+  "comments": [
     {
-      "id" : 1,
-      "prodID" : 1,
-      "image" : [
+      "id": 1,
+      "prodID": 1,
+      "image": [
         "Chiaki_Sato.png"
       ],
-      "content" : "Sản phẩm này rất tốt",
-      "rating" : 5
+      "content": "Sản phẩm này rất tốt",
+      "rating": 5
     }
   ],
-  "category" : [
+  "category": [
     {
-      "id" : 1,
-      "name" : "Điện Thoại"
+      "id": 1,
+      "name": "Điện Thoại"
     },
     {
-      "id" : 2,
-      "name" : "Laptop"
+      "id": 2,
+      "name": "Laptop"
     },
     {
-      "id" : 3,
-      "name" : "Gia Dụng"
+      "id": 3,
+      "name": "Gia Dụng"
     }
   ],
-  "brands" : [
+  "brands": [
     {
-      "id" : 1,
-      "name" : "Apple",
-      "image" : "applelogo.webp"
+      "id": 1,
+      "name": "Apple",
+      "image": "applelogo.webp"
     },
     {
-      "id" : 2,
-      "name" : "Asus",
-      "image" : "asuslogo.webp"
+      "id": 2,
+      "name": "Asus",
+      "image": "asuslogo.webp"
     },
     {
-      "id" : 3,
-      "name" : "Oppo",
-      "image" : "oppologo.webp"
+      "id": 3,
+      "name": "Oppo",
+      "image": "oppologo.webp"
     },
     {
-      "id" : 4,
-      "name" : "Xiaomi",
-      "image" : "xiaomilogo.webp"
+      "id": 4,
+      "name": "Xiaomi",
+      "image": "xiaomilogo.webp"
     },
     {
-      "id" : 5,
-      "name" : "Samsung",
-      "image" : "samsunglogo.webp"
+      "id": 5,
+      "name": "Samsung",
+      "image": "samsunglogo.webp"
     }
   ]
 }
