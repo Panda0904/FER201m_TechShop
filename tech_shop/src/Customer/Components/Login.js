@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const Login = () => {
-    const [     username, usernameupdate] = useState('');
+    const [username, usernameupdate] = useState('');
     const [password, passwordupdate] = useState('');
 
     const usenavigate=useNavigate();
@@ -17,7 +17,7 @@ sessionStorage.clear();
         if (validate()) {
             ///implentation
             // console.log('proceed');
-            fetch("shttp://localhost:9999/users/" + username).then((res) => {
+            fetch(`http://localhost:9999/users/${username}`).then((res) => {
                 return res.json();
             }).then((resp) => {
                 //console.log(resp)
@@ -39,6 +39,7 @@ sessionStorage.clear();
         }
     }
 
+    
     const validate = () => {
         let result = true;
         if (username === '' || username === null) {

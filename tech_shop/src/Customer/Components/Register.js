@@ -79,7 +79,7 @@ const Register = () => {
                             <div className="row">
                                 <div className="col-lg-12">
                                     <div className="form-group">
-                                        <label>Tên<span className="errmsg">(*):</span></label>
+                                        <label>Tên đăng nhập<span className="errmsg">(*):</span></label>
                                         <input value={username} onChange={e => setusername(e.target.value)} className="form-control"></input>
                                     </div>
                                 </div>
