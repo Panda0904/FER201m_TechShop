@@ -57,6 +57,50 @@
       "address": "Ha Noi",
       "gender": "female",
       "id": 5
+    },
+    {
+      "username": "abc",
+      "name": "Ha Thi F",
+      "password": "abc",
+      "email": "adb@gmail.com",
+      "phone": "341313",
+      "country": "india",
+      "address": "Ha Noi",
+      "gender": "female",
+      "id": 6
+    },
+    {
+      "username": "dat",
+      "name": "dat",
+      "password": "123456",
+      "email": "nguyenhuydat11102002@gmail.com",
+      "phone": "0321654988",
+      "repass": "123456",
+      "address": "Ha Noi",
+      "gender": "female",
+      "id": 7
+    },
+    {
+      "username": "quan",
+      "name": "quan",
+      "password": "abcd",
+      "email": "adb@gmail.com",
+      "phone": "0321654987",
+      "repass": "abcd",
+      "address": "Ha Noi",
+      "gender": "female",
+      "id": 8
+    },
+    {
+      "username": "dat1",
+      "name": "huy dat",
+      "password": "abcd",
+      "email": "datnh112@gmail.com",
+      "phone": "0123456789",
+      "repass": "abcd",
+      "address": "Ha Noi",
+      "gender": "male",
+      "id": 9
     }
   ],
   "products": [

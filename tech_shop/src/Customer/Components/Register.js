@@ -9,7 +9,7 @@ const Register = () => {
     const [password, passwordchange] = useState("");
     const [email, emailchange] = useState("");
     const [phone, phonechange] = useState("");
-    const [country, changecountry] = useState("india");
+    const [repass, Repass] = useState("");
     const [address, addresschange] = useState("");
     const [gender, genderchange] = useState("female");
 
@@ -35,14 +35,23 @@ const Register = () => {
             errormessage += ' Email';
         }
 
+        if (repass === null || repass === '') {
+            isproceed = false;
+            errormessage += ' Re-enter Password';
+        } else if (password !== repass) {
+            isproceed = false;
+            errormessage = 'Password and Re-enter Password do not match';
+        }
+
+
         if(!isproceed){
-            toast.warning(errormessage)
+            alert(errormessage)
         }else{
             if(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(email)){
 
             }else{
                 isproceed = false;
-                toast.warning('Please enter the valid email')
+                alert('Please enter the valid email')
             }
         }
         return isproceed;
@@ -51,7 +60,7 @@ const Register = () => {
 
     const handlesubmit = (e) => {
             e.preventDefault();
-            let user = { username, name, password, email, phone, country, address, gender };
+            let user = { username, name, password, email, phone, repass, address, gender };
             if (IsValidate()) {
             //console.log(regobj);
             fetch("http://localhost:9999/users", {
@@ -59,10 +68,10 @@ const Register = () => {
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify(user)
             }).then((res) => {
-                toast.success('Registered successfully.')
+                alert('Registered successfully.')
                 navigate('/login');
             }).catch((err) => {
-                toast.error('Failed :' + err.message);
+                alert('Failed :' + err.message);
             });
         }
     }
@@ -79,54 +88,54 @@ const Register = () => {
                             <div className="row">
                                 <div className="col-lg-12">
                                     <div className="form-group">
-                                        <label>Tên đăng nhập<span className="errmsg">(*):</span></label>
+                                        <label>Tên đăng nhập<span style={{color: 'red'}} className="errmsg">(*):</span></label>
                                         <input value={username} onChange={e => setusername(e.target.value)} className="form-control"></input>
                                     </div>
                                 </div>
                                 <div className="col-lg-12">
                                     <div className="form-group">
-                                        <label>Mật khẩu <span className="errmsg">(*):</span></label>
+                                        <label>Mật khẩu <span style={{color: 'red'}} className="errmsg">(*):</span></label>
                                         <input value={password} onChange={e => passwordchange(e.target.value)} type="password" className="form-control"></input>
                                     </div>
                                 </div>
                                 <div className="col-lg-12">
-                                <div className="form-group">
-                                        <label>Fu <span className="errmsg">(*):</span></label>
-                                        <textarea value={country} onChange={e => changecountry(e.target.value)} className="form-control"></textarea>
+                                    <div className="form-group">
+                                        <label>Nhập lại mật khẩu <span style={{color: 'red'}} className="errmsg">(*):</span></label>
+                                        <input value={repass} onChange={e => Repass(e.target.value)} type="password" className="form-control"></input>
                                     </div>
                                 </div>
                                 <div className="col-lg-12">
                                     <div className="form-group">
-                                        <label>Full Name <span className="errmsg">(*):</span></label>
+                                        <label>Tên đầy đủ <span style={{color: 'red'}} className="errmsg">(*):</span></label>
                                         <input value={name} onChange={e => namechange(e.target.value)} className="form-control"></input>
                                     </div>
                                 </div>
                                 <div className="col-lg-12">
                                     <div className="form-group">
-                                        <label>Gender <span className="errmsg">(*):</span></label>
+                                        <label>Giới tính <span style={{color: 'red'}} className="errmsg">(*):</span></label>
                                         
                                         <input type="radio" checked={gender === 'male'} onChange={e => genderchange(e.target.value)} name="gender" value="male" className="app-check"></input>
-                                        <label>Male</label>
+                                        <label>Nam</label>
                                         <input type="radio" checked={gender === 'female'} onChange={e => genderchange(e.target.value)} name="gender" value="female" className="app-check"></input>
-                                        <label>Female</label>
+                                        <label>Nữ</label>
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="form-group">
-                                        <label>Email <span className="errmsg">*</span></label>
+                                        <label>Email <span style={{color: 'red'}} className="errmsg">(*):</span></label>
                                         <input value={email} onChange={e => emailchange(e.target.value)} className="form-control"></input>
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="form-group">
-                                        <label>Phone <span className="errmsg"></span></label>
+                                        <label>Số điện thoại <span style={{color: 'red'}} className="errmsg"></span></label>
                                         <input value={phone} onChange={e => phonechange(e.target.value)} className="form-control"></input>
                                     </div>
                                 </div>
                                 
                                 <div className="col-lg-12">
                                     <div className="form-group">
-                                        <label>Address <span className="errmsg">(*):</span></label>
+                                        <label>Địa chỉ <span style={{color: 'red'}} className="errmsg">(*):</span></label>
                                         <textarea value={address} onChange={e => addresschange(e.target.value)} className="form-control"></textarea>
                                     </div>
                                 </div>
@@ -136,8 +145,8 @@ const Register = () => {
 
                         </div>
                         <div className="card-footer">
-                            <button type="submit" className="btn btn-primary">Register</button> |
-                            <Link to={'/login'} className="btn btn-danger">Close</Link>
+                            <button type="submit" className="btn btn-primary">Đăng ký</button> |
+                            <Link to={'/login'} className="btn btn-danger">Quay lại</Link>
                         </div>
                     </div>
                 </form>

@@ -18,7 +18,7 @@ const Login = () => {
     const ProceedLogin = (e) => {
         e.preventDefault();
         let indexUser=user.findIndex(
-            (user)=>user.userName==username&&user.password==password
+            (user)=>user.username==username&&user.password==password
         )
         if(indexUser===-1){
             alert("user or password not found")
@@ -37,15 +37,15 @@ const Login = () => {
                 <form onSubmit={ProceedLogin} className="container">
                     <div className="card">
                         <div className="card-header">
-                            <h2>User Login</h2>
+                            <h2>Đăng nhập</h2>
                         </div>
                         <div className="card-body">
                             <div className="form-group">
-                                <label>User Name <span className="errmsg">*</span></label>
+                                <label>Tên đăng nhập <span className="errmsg">*</span></label>
                                 <input value={username} onChange={e => usernameupdate(e.target.value)} className="form-control"></input>
                             </div>
                             <div className="form-group">
-                                <label>Password <span className="errmsg">*</span></label>
+                                <label>Mật khẩu <span className="errmsg">*</span></label>
                                 <input type="password" value={password} onChange={e => passwordupdate(e.target.value)} className="form-control"></input>
                             </div>
                         </div>
